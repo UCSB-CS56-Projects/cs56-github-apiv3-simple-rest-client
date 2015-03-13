@@ -15,7 +15,7 @@ cs56-math-conversion-quiz, W15-YES , PazZaitGivon , jamilka (6pm) , GUI for bina
 cs56-utilities-password-generator, W15-YES , PazZaitGivon , vincenicoara arda- (4pm) , A file that creates random passwords with a given password length
 cs56-games-memory-card, W15-YES , dcoffill , juliomaldonado"," shelbyelgood (5pm) , A memory card game
 cs56-games-fish-animation, W15-YES , jrcryan , mochele15"," shadeebarzin (4pm) , A fish animation game
-cs56-games-pong, W15-YES , alecharrell ,vincegando , An implementation of the classic game Pong"," with cooperative multiplayer support.
+cs56-games-pong, W15-YES , alecharrell ,vincegando"," Lingampalli56 , An implementation of the classic game Pong"," with cooperative multiplayer support.
 cs56-misc-recipe-manager, NO , mastergberry , Recipe Manager
 CategoryList, ? , N/A
 cs56-utilities-TSA-Encryption, ? , bronhuston 4pm , rkjha7"," xgmak94 , TopCoder Security Agency (TSA"," established today) has just invented a new encryption system! This encryption system takes as its input a list of numbers to encrypt. 
@@ -24,7 +24,71 @@ cs56-misc-map-gui, W15-TBD , PazZaitGivon , , Map GUI for navigating around UCSB
 cs56-games-roguelike, W15-YES , dcoffill , dcwang (6pm) , ASCII roguelike game
 cs56-games-Go, YES , alecharrell , pichumy , A gui version of the Chinese board game called Go
 cs56-games-snake, W15-YES , alecharrell , eshong , Snake game
-cs56-music-basic-synthesis-demo, W-15 YES , mliou , mohithingorani"," , A basic demo of some simple synthesis starting with sine waves
-cs56-games-pacman, W15-YES , mliou , 2yangk23"," jinzhu1993 (4pm), (ianvernon) Pacman game"," starting with code from http://zetcode.com/tutorials/javagamestutorial/pacman/"," and improving
+cs56-music-basic-synthesis-demo, W-15 YES , mliou , mohithingorani"," wespollek (5pm), A basic demo of some simple synthesis starting with sine waves
+cs56-games-pacman, W15-YES , mliou , 2yangk23"," jimzhu1993 (4pm), (ianvernon) Pacman game"," starting with code from http://zetcode.com/tutorials/javagamestutorial/pacman/"," and improving
 cs56-games-towers-of-hanoi, YES , alecharrell , connormulcahey"," emorozova (4pm) , A towers of hanoi GAME (not a solver or a simulation or an animation of the algorithm!)
 cs56-discretemath-towers-sierpinski, ? , jstaahl 4pm , ShadowAries , Java software to explore the relationship between the Towers of Hanoi and the Sierpinski Triangle
+cs56-utilities-GEscraper, W15-YES , PazZaitGivon , dlynch305 brentkirkland (4pm) ,Scrape UCSB course pages for appripriate classes that fulfill certain GE requirements
+cs56-music-beatbox, W15-YES , mliou , GabeRome","maperghis (6pm), A gui that has the ability to mix together all sorts of instruments just like a beatbox
+Alex-Example, This is an example repo for the guest lecture.
+cs56-tutorials-autocomplete, YES , mastergberry , A small project containing simple classes and main programs that demonstrate how to build "autocomplete" widgets in a Swing GUI.
+cs56-games-client-server-v2, W15-YES , dcoffill , brandonwicka"," jordannguyen (4pm) , A new version of cs56-games-client-server that is identical on the outside"," but substantially refactored inside to have better MVC separation.
+cs56-games-band-tycoon, Allow user to try their hand at being a band tycoon
+cs56-games-gomoku, NO , mastergberry , The game of Gomoku branched off into a separate project from code originally in cs56-games-client-server
+cs56-games-country-runner, W15-YES , mliou , brianyan","salolivares (5pm) , Running game with obstacles.
+cs56-utilities-todo, W15-YES , PazZaitGivon , hannavigil cpounds (4pm) , Multi-level todo list application
+cs56-tutorials-lint-style-programs, NO , mastergberry , A tutorial about how to use JLint"," Lint4j"," and similar such utilities.
+cs56-games-hangman, W15-YES , jrcryan , ecarnohan"," triptisinghal (4pm) , Graphical hangman game
+cs56-utilities-FTP-Client, W15-YES , dcoffill , jeffrey711 (4pm) , A FTP client which can connect to a server"," download files from server and save it on local
+cs56-games-coop-adventure, NO , bronhuston , nissayeva , (erdinckorpeoglu) Point and click adventure game about the Student Housing Coops
+utilities-calculator, YES , alecharrell ,novemberted(4pm) , A GUI Calculator
+cs56-games-flood-it, NO , mastergberry , krbriggs"," christopherluo , A game where the goal is to get entire board to the same color
+cs56-utilities-grapher, W15-TBD , dcoffill , , A 2D graphing GUI
+cs56-games-simon-says, W15 - YES , jrcryan , fstruong"," jazariethach (6pm) , A "Simon Says" game where the player must replicate a series of actions
+cs56-utilities-calculator, W15-TBD , dcoffill ,   , A graphical calculator written in Java
+cs56-utilities-rss-reader, YES , mastergberry , TBD , (erdinckorpeoglu) Java interface for the website CommaFeed.com"," an RSS reader. 
+cs56-music-mp3-player, NO , bronhuston , TBD , An app that can play music from an mp3 file
+cs56-utilities-cryptography, W15-YES , alecharrell , peffedu , Implementation of 3 different types of string ciphers"," both encryption and decryption.
+cs56-games-connectfour, W15-YES , jrcryan , SharSoft"," alexisjimenez (5:00pm) , An implementation of Connect Four
+cs56-games-battleship-alt, W15-YES , PazZaitGivon , sxh1991230 (5pm) , An alternative version of Battleship.
+cs56-games-battleship-third, For reasons that still aren't clear"," we ended with three folks assigned to this project.  Eventually we'll cleanup this mess.
+cs56-tutorials-image-zoom, W15-YES , dcoffill , andrewtran1995"," elswenson (5pm) , A tutorial illustrating how to do simple zoom in and zoom out controls on"," for example"," a map image.
+cs56-tutorials-expression-parsing, NO , mastergberry , Tutorials for expression parsing libraries
+cs56-utilities-GEAR-scraper, ? , andrewberls 5pm , alanbuzdar , Scrape the UCSB Gear Catalog to form lists of structured information
+W14-lab05, UCSB CS56 W14-lab05
+cs56-utilities-ucsb-curriculum-htmlunit, ? , andrewberls 5pm , moniker85 , (pconrad) UCSB Curriculum Scraper based on HtmlUnit , MIT (junit","htmlunit)
+cs56-games-states-quiz, W15-YES , mliou , nickeidler (4pm), Quiz on US States with GUI
+cs56-games-treasure-hunter, W15-YES , dcoffill , ShayanPersonal (5pm) , Treasure Hunter Game
+cs56-games-minesweeper, W15-YES , mliou , amazingcaleb (5pm) , Minesweeper game
+cs56-utilities-restaurant-list, NO , mastergberry , andrewpang","bhammel , app that lists restaurants from its database
+cs56-games-rock-paper-scissors, W15-YES , mliou , aferguson14 (6pm), (jcneally) rock paper scissors game using Pokemon
+cs56-games-name-memorization, W15-YES , jrcryan , kevinwalau"," tkyngo (4pm) , A name memorization game
+cs56-utilities-binary-clock, W15-YES , dcoffill , JohnUCSB"," mbahia (4pm) , Graphical Binary Clock
+cs56-games-pokemon-map, W15-YES , alecharrell , omeedrabani  & william-eiers,  Pokemon Map Renderer
+cs56-games-poker, W15-YES , mliou , spencerprescott (6pm), (pconrad) Poker Game
+cs56-games-tetris, W15-YES , dcoffill , nikolasjchaconas (4pm) & marshallnaito, A classic game of Tetris
+cs56-games-dealer, ? , jcneally 4pm , acantor , Application to shuffle a deck of 52 playing cards and deal them to the user
+cs56-utilities-credit-card-validator, W15-YES , jrcryan , EasterAndJay"," easyish (5pm) , A credit card number validator
+cs56-games-simple-rpg, W15-TBD , PazZaitGivon , vivekpatel42 (4pm) jamilka (6pm)  , A simple rpg game
+cs56-games-beetle, YES , bronhuston , kjih , Roll dice to build a beetle
+empty-with-MIT-license, This is only a test to see what the MIT-license looks like
+cs56-utilities-fork-tree-creator, New Development Project: Create utility that makes fork tree diagrams
+W15-lab04, Base repository for W15-lab04.  Will be OPEN SOURCE code.
+cs56-networking-simple-socket-examples, This repo is for SIMPLE socket programs that start from those at this tutorial"," and build from there: http://cs.lmu.edu/~ray/notes/javanetexamples/
+cs56-android-getting-started, W15-YES , pconrad , pmsosa (4pm) , A repo that provides a basis for getting started with android programming
+cs56-networking-simplechatclient, NO, W15, alecharrell
+cs56-pokergame, 
+cs56-hangman, W15-NO , dcoffill , , Duplicate"," already exists as cs56-games-hangman
+cs56-games-guess-the-capital, W15-YES , PazZaitGivon ,  jillfarns tgetty , A command line 'Guess the Capital Game' where a player will be presented with either a random state or a random country 
+cs56-calculatewalkingtime, W15-TBD , PazZaitGivon , , calculates time by walking or biking from building to building at UCSB
+cs56-scrapers-pacific-mall, W15-NO , PazZaitGivon , , Runs and nothing happens
+cs56-games-blackjack-alt, 
+cs56-math-polynomialderivative, W15-NO , PazZaitGivon , , There is no code here at all
+cs56-scrapers-in-n-out, 
+cs56-utilities-bac-calculator, W15-YES , PazZaitGivon , nickkpoon rrthirumulu(5pm)  , Blood Alcohol Concentration Calculator
+cs56-games-statecapitalsgame, 
+cs56-github-jcapi-demo, TBD , pconrad , , Demo of http://github.jcabi.com/
+cs56-github-apiv3-simple-rest-client, W15 , pconrad , yamen321 , Simplest possible github APIv3 simple rest client
+cs56-apidemo-facebook, A stub repo in which one might place a API demo for Facebook"," similar to the one in https://github.com/UCSB-CS56-Projects/cs56-github-apiv3-simple-rest-client
+cs56-misc-cool-animations, This repo is for W15 students with animations that might form future projects to enter issues letting us know
+cs56-android-smoke-signals, W15 , pconrad , pmsosa 4pm , Way to use your phone by proxy through SMS

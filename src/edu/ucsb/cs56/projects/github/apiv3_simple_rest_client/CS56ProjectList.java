@@ -40,7 +40,7 @@ public class CS56ProjectList {
 	    String oauthToken = Demo1.readAllBytes("tokens/MostPrivileges.txt");
 	   // writer.write("Read oauthToken--length is " + oauthToken.length());
 	    
-	    URL url = new URL("https://api.github.com/orgs/UCSB-CS56-Projects/repos");
+	    URL url = new URL("https://api.github.com/orgs/UCSB-CS56-Projects/repos?per_page=100");
 
 	    InputStream is = url.openStream();
 	    JsonParser parser = Json.createParser(is);
