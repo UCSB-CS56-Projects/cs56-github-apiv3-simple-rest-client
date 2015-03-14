@@ -37,11 +37,12 @@ public class CS56ProjectDump {
 	    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 	    conn.setRequestMethod("GET");
 	    conn.setRequestProperty("Accept", "application/json");
+	    conn.setRequestProperty("Authorization", "token " + oauthToken);
 	    if (conn.getResponseCode() != 200) {
 		throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
 	    }
-	    
-	    BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+	  
+	    BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 	    String apiOutput = br.readLine();
 	    System.out.println(apiOutput);
 	    conn.disconnect();
