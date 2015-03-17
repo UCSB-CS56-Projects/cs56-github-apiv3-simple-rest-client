@@ -40,9 +40,12 @@ public class CS56ProjectList {
 	    String oauthToken = Demo1.readAllBytes("tokens/MostPrivileges.txt");
 	   // writer.write("Read oauthToken--length is " + oauthToken.length());
 	    
-	    URL url = new URL("https://api.github.com/orgs/UCSB-CS56-Projects/repos");
-
-	    InputStream is = url.openStream();
+	    URL url = new URL("https://api.github.com/orgs/UCSB-CS56-Projects/repos?per_page=100");
+	    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	    conn.setRequestMethod("GET");
+	    conn.setRequestProperty("Accept", "application/json");
+	    conn.setRequestProperty("Authroization", "token " + oauthToken);
+	    InputStream is = conn.getInputStream();
 	    JsonParser parser = Json.createParser(is);
 
       File file = new File("data.csv");
@@ -50,27 +53,71 @@ public class CS56ProjectList {
       file.createNewFile();
       // creates a FileWriter Object
       FileWriter writer = new FileWriter(file); 
-
+      //String to hold project name for issues URL
+      String projectName = "";
+      String projectDescription = "";
 	    while (parser.hasNext()) {
 		Event e = parser.next();
 		if (e == Event.KEY_NAME) {
 		    switch (parser.getString()) {
 		    case "name":
 			parser.next();
-			writer.write(parser.getString());
-			writer.write(", ");
+			projectName = parser.getString();
 			break;
 		    case "description":
 			parser.next();
-			writer.write(parser.getString().replace(",","\",\"").replace("|",","));
-			writer.write("\n");
-	//		writer.write("---------");
+			projectDescription = parser.getString().replace(",","\",\"").replace("|",",");
 			break;
+		    case "has_issues":
+			String issuesUrl = "https://api.github.com/repos/UCSB-CS56-Projects/" + projectName + "/issues?state=all";
+			URL url2 = new URL(issuesUrl);
+			HttpURLConnection conn2 = (HttpURLConnection) url2.openConnection();
+			conn2.setRequestMethod("GET");
+			conn2.setRequestProperty("Accept", "application/json");
+			conn2.setRequestProperty("Authroization", "token " + oauthToken);
+		      	InputStream is2 = conn2.getInputStream();
+			JsonParser issuesParser = Json.createParser(is2);
+			while (issuesParser.hasNext()){
+			    Event ie = issuesParser.next();
+			    if (ie == Event.KEY_NAME){
+				switch (issuesParser.getString()){
+				case "number":
+				    writer.write(projectName);
+				    writer.write(", ");
+				    writer.write(projectDescription);
+				    writer.write(" , ");
+				    issuesParser.next();
+				    writer.write(issuesParser.getString());
+				    writer.write(" , ");
+				    break;
+				case "state":
+				    issuesParser.next();
+				    writer.write(issuesParser.getString());
+				    writer.write(" , ");
+				    break;
+				case "login":
+				    issuesParser.next();
+				    writer.write(issuesParser.getString());
+				    writer.write(" , ");
+				    break;
+				case "title":
+				    issuesParser.next();
+				    writer.write(issuesParser.getString());
+				    writer.write(" , ");
+				    break;
+				case "body":
+				    issuesParser.next();
+				    writer.write(issuesParser.getString().replace(',','.').replace('\n', ' ').replace('\r', ' '));
+				    writer.write("\n");
+				    break;
+				}//switch
+			    }//if
+			}//while
 		    } // switch
 		} // if
 	    } // while
-	      writer.flush();
-      writer.close();
+	    writer.flush();
+	    writer.close();
 	}  catch (MalformedURLException e) {
 	    e.printStackTrace();
 	} catch (IOException e) {
