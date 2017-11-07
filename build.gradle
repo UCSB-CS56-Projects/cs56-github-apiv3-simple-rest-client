@@ -28,6 +28,7 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'src/edu/ucsb/cs56/projects/github/repo_curation/testAPILib'
 
+//ant.importBuild 'build.xml'
 
