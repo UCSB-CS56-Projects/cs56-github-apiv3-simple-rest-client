@@ -3,7 +3,6 @@ Github Repo Curation
 * Use kohsuke API to put together a database of cs56 student's github repo's
 
 
-
 Old README, left for now:
 
 # You First need to understand:
