@@ -106,28 +106,8 @@
   </target>
   
   
-  <target name="javadoc"
-	  depends="compile"
-	  description="deploys the javadoc onto the web">
-    <delete dir="javadoc" quiet="true"/>
-    <javadoc destdir="javadoc" author="true" version="true" use="true">
-      <fileset dir="src" includes="**/*.java"/>
-      <classpath refid="project.class.path" />
-    </javadoc>
-    
-    
-    <delete quiet="true" dir="${javadocDest}"/>
-    <copy todir="${javadocDest}">
-      <fileset dir="javadoc"/>
-    </copy>
-    <chmod dir="${javadocDest}" perm="755" type="dir" includes="**"/>
-    <chmod dir="${javadocDest}" perm="755" type="file" includes="**/*"/>
-    
-    <echo>Javadoc deployed to ${javadocURL} if on CSIL</echo>
-    <echo> or if not on CSIL, try file:///${javadocDest}/index.html</echo>
-    
-  </target>
-  
+   
+ 
   
   
   <target name="test" depends="compile" description="test the Hand class">
