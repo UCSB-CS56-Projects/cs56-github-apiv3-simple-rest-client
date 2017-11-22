@@ -2,6 +2,8 @@ package edu.ucsb.cs56.projects.github.repo_curation;
 
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
+import org.kohsuke.github.GHOrganization;
+import org.kohsuke.github.GHUser;
 import java.io.*;
 
 import java.util.Collection;
@@ -11,7 +13,21 @@ public class listLegacyCodeRepos{
                 
 		printAllRepoNames("UCSB-CS56-Projects");
         	printNumberOfRepos("UCSB-CS56-Projects");
+		printAllMembers("UCSB-CS56-F17");	
 	
+	}
+
+	public static void printAllMembers(String user){
+		try{
+			GHOrganization org = GitHub.connect().getOrganization(user);
+			Collection<GHUser> lst = org.getMembers();
+			for (GHUser u : lst){
+				System.out.println(user + " has member: " + u.getName());
+			}
+
+		} catch(IOException e){
+			e.printStackTrace();
+		}
 	}
 
 	public static void printAllRepoNames(String user){
