@@ -11,7 +11,7 @@ import java.util.Collection;
 public class listLegacyCodeRepos{
         public static void main(String[] args) {
                 
-		printAllRepoNames("UCSB-CS56-Projects");
+		printAllRepoInfo("UCSB-CS56-Projects");
         	printNumberOfRepos("UCSB-CS56-Projects");
 		printAllMembers("UCSB-CS56-F17");	
 	
@@ -30,14 +30,15 @@ public class listLegacyCodeRepos{
 		}
 	}
 
-	public static void printAllRepoNames(String user){
+	public static void printAllRepoInfo(String user){
 		try{
                         Collection<GHRepository> lst = GitHub.connect().getUser(user).getRepositories().values();
                         for (GHRepository r : lst) {
                                 System.out.println("Name of repo: " + r.getName());
-
-                        }
-                       // System.out.println("Number of repos: " + lst.size());
+				System.out.println("\tIssue count: " + r.getOpenIssueCount());
+			//	System.out.println("\n" + r.getLastCommitStatus());	
+                        
+			}
                 }catch(IOException e){
                         e.printStackTrace();
                 }
