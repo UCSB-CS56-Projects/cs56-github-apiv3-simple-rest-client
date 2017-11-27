@@ -28,11 +28,28 @@ public class listLegacyCodeRepos{
         	printNumberOfRepos(user);
 		
 		String org = "UCSB-CS56-F17";
-		printAllMembers(org);	
+		printAllMembers(org);
+		printNumMembers(org);	
 	
 	}
 
-	/**printAllMembers prints all the names of members of a given github organization
+	/**printNumMembers prints the number of members for a given github organization.Members need to be public on the org for this to work.
+	 @param user is the name of a github organization
+	 
+	*/
+
+	public static void printNumMembers(String user){
+		   try{
+                        GHOrganization org = GitHub.connect().getOrganization(user);
+                        Collection<GHUser> lst = org.getMembers();
+                        System.out.println("Number of members: " + lst.size());
+
+                } catch(IOException e){
+                        e.printStackTrace();
+                }	
+	}
+
+	/**printAllMembers prints all the names of members of a given github organization.If the member does not provide a name, then his/her github login id is printed.
 	   @param user is the name of a github organization
 		
 	*/
@@ -41,7 +58,11 @@ public class listLegacyCodeRepos{
 			GHOrganization org = GitHub.connect().getOrganization(user);
 			Collection<GHUser> lst = org.getMembers();
 			for (GHUser u : lst){
-				System.out.println(user + " has member: " + u.getName());
+				String name = u.getName();
+				if(name == null){
+					name = u.getLogin();
+				}
+				System.out.println(user + " has member: " + name);
 			}
 
 		} catch(IOException e){
@@ -59,7 +80,7 @@ public class listLegacyCodeRepos{
                         for (GHRepository r : lst) {
                                 System.out.println("Name of repo: " + r.getName());
 				System.out.println("\tIssue count: " + r.getOpenIssueCount());
-			//	System.out.println("\n" + r.getLastCommitStatus());	
+				System.out.println("\tDate of last commit to master: " + r.getUpdatedAt());	
                         
 			}
                 }catch(IOException e){
