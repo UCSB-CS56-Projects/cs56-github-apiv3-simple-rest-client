@@ -8,15 +8,34 @@ import java.io.*;
 
 import java.util.Collection;
 
+/**
+	Class to pull info about github account to help grade cs56 projects
+
+	@author Yossi Hertzberg
+	@author Vamsi Kalidindi
+
+*/
+
 public class listLegacyCodeRepos{
-        public static void main(String[] args) {
-                
-		printAllRepoInfo("UCSB-CS56-Projects");
-        	printNumberOfRepos("UCSB-CS56-Projects");
-		printAllMembers("UCSB-CS56-F17");	
+        /** main method to get repo info through calls to helper methods
+	    @param args not used
+	 
+	*/
+	public static void main(String[] args) {
+                String user = "UCSB-CS56-Projects";
+
+		printAllRepoInfo(user);
+        	printNumberOfRepos(user);
+		
+		String org = "UCSB-CS56-F17";
+		printAllMembers(org);	
 	
 	}
 
+	/**printAllMembers prints all the names of members of a given github organization
+	   @param user is the name of a github organization
+		
+	*/
 	public static void printAllMembers(String user){
 		try{
 			GHOrganization org = GitHub.connect().getOrganization(user);
@@ -30,6 +49,10 @@ public class listLegacyCodeRepos{
 		}
 	}
 
+	/**printAllRepoInfo prints the name and issue count of all repo's of a given github user's account
+	   @param user is the name of a github user
+	 
+	*/
 	public static void printAllRepoInfo(String user){
 		try{
                         Collection<GHRepository> lst = GitHub.connect().getUser(user).getRepositories().values();
@@ -44,6 +67,11 @@ public class listLegacyCodeRepos{
                 }
 
 	}
+	
+	/**printNumberOfRepos prints the number of repo's in a given user's account
+	   @param user is the name of the github user
+	 
+	*/
 
 	public static void printNumberOfRepos(String user){
 		try{
