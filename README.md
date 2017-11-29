@@ -19,3 +19,12 @@ To remember:
 * Can only get member names for org who has publicly visible members
 * When listing member names of org, our program will try to output the actual name of the user. If the user did not specify name on github account, it prints their github id instead.
 * Date of list commit is the date for the original root repo, not the forked version. Will only update if the forked repo gets merged to root.
+
+F17 Final Remarks:
+* See above for whats working now and important things to remember when using this code
+* Features that could be added:
+* Find last commit date of the forked version of your repo, instead of the version on the ucsb-cs56 organization
+* Maybe find a better way to deal with the problem of github users who did not include their names. Right now we just use their github id's instead.
+* Opportunities to add on: A better data visualization method than using cin and cout
+* Maybe use special data formatting and print to a text file, so other programs could run on that text file to automatically grade and check things about each repo.
+
